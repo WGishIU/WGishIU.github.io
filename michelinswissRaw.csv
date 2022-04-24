@@ -1,0 +1,160 @@
+﻿group,A,B,C,D,
+Aargau,2,0,0,0,2
+Aire-la-Ville,1,0,0,0,1
+Alvaneu,1,0,0,0,1
+Andermatt,0,1,0,0,1
+Arosa,1,0,0,0,1
+Ascona,2,2,1,0,5
+Auvernier,1,0,0,0,1
+Avenches,1,0,0,0,1
+BÃ¼lach,1,0,0,0,1
+Bad Ragaz,0,1,2,0,3
+Basel,3,2,1,1,7
+Bedretto,1,0,0,0,1
+Bellevue,0,1,0,0,1
+Bellinzona,0,1,0,0,1
+Berne,1,3,0,0,4
+Bernex,1,0,0,0,1
+Bex,0,1,0,0,1
+Binn,1,0,0,0,1
+Birmenstorf,1,0,0,0,1
+Blatten bei Malters,1,0,0,0,1
+Blatten im LÃ¶tschental,1,0,0,0,1
+Bottmingen,1,0,0,0,1
+Brail,0,1,0,0,1
+Bubendorf,0,2,0,0,2
+Bubikon,1,1,0,0,2
+Burgdorf,1,1,0,0,2
+Carouge,2,1,0,0,3
+Charmey,0,1,0,0,1
+Cheseaux-NorÃ©az,0,1,0,0,1
+Collonge-Bellerive,1,0,0,0,1
+Conches,1,0,0,0,1
+Cossonay,1,0,0,0,1
+Crans Montana,2,1,0,0,3
+Crissier,0,0,0,1,1
+Dallenwil,0,1,0,0,1
+Davos Platz,1,0,0,0,1
+Diessenhofen,1,0,0,0,1
+Ebersecken,1,0,0,0,1
+Eglisau,1,0,0,0,1
+Emmenmatt,1,0,0,0,1
+Erlenbach,1,0,0,0,1
+Escholzmatt,1,1,0,0,2
+FÃ¼rstenau,1,0,0,1,2
+Fislisbach,1,0,0,0,1
+FlÃ¤sch,1,0,0,0,1
+FlÃ¼h,0,1,0,0,1
+Flims,1,0,0,0,1
+Freidorf,0,1,0,0,1
+Freienstein-Teufen,1,0,0,0,1
+Fribourg,0,1,0,0,1
+Frutigen,1,0,0,0,1
+Gachnang,1,0,0,0,1
+Gais,0,1,0,0,1
+Gattikon,0,1,0,0,1
+Geneva,3,5,0,0,8
+Gerolfingen,1,0,0,0,1
+Grenchen,1,0,0,0,1
+Grub,1,0,0,0,1
+Gstaad,0,1,0,0,1
+Heiden,1,0,1,0,2
+Hergiswil,1,1,0,0,2
+Hermance,1,0,0,0,1
+Herrliberg,1,0,0,0,1
+Hildisrieden,1,0,0,0,1
+Hilterfingen,1,0,0,0,1
+Hochdorf,1,0,0,0,1
+Ilanz,1,0,0,0,1
+KÃ¼snacht,0,0,1,0,1
+Kestenholz,1,0,0,0,1
+Klosters,1,0,0,0,1
+Kloten,1,0,0,0,1
+La Chaux-de-Fonds,1,0,0,0,1
+La Punt-Chamues-ch,1,0,0,0,1
+LÃ¶mmenschwil,0,1,0,0,1
+Laax,1,0,0,0,1
+Lausanne,2,2,1,0,5
+Le Noirmont,0,0,1,0,1
+Lenzerheide,0,1,0,0,1
+Ligerz,1,0,0,0,1
+Losone,1,0,0,0,1
+Lugano,0,1,0,0,1
+MÃ¤genwil,1,0,0,0,1
+Madiswil,1,0,0,0,1
+Madulain,0,1,0,0,1
+Massagno,1,0,0,0,1
+Meggen,1,0,0,0,1
+Meiringen,1,0,0,0,1
+Mels,1,1,0,0,2
+Monthey,0,1,0,0,1
+Murten,1,0,0,0,1
+NiedergÃ¶sgen,1,0,0,0,1
+Noville,1,0,0,0,1
+OberÃ¤geri,1,0,0,0,1
+Oberstammheim,1,0,0,0,1
+Oberwil,0,1,0,0,1
+Olten,1,0,0,0,1
+Onex,1,0,0,0,1
+Pleujouse,1,0,0,0,1
+Ponte Brolla,1,0,0,0,1
+RÃ¼schlikon,1,1,0,0,2
+Rehetobel,1,0,0,0,1
+Reichenbach,1,0,0,0,1
+Rheineck,1,0,0,0,1
+Riedholz,1,1,0,0,2
+Ried-Muotathal,1,0,0,0,1
+Riemenstalden,1,0,0,0,1
+Rigi Kaltbad,1,1,0,0,2
+Rougemont,1,0,0,0,1
+Saanen,1,0,0,0,1
+Saint Moritz,2,2,4,0,8
+Samnaun,0,1,0,0,1
+San Vittore,1,0,0,0,1
+Sankt Gallen,2,2,1,0,5
+Sankt Niklausen,1,0,0,0,1
+Satigny,1,0,1,0,2
+SchÃ¶ftland,1,0,0,0,1
+Schaffhausen,1,0,0,0,1
+Schenkon,1,0,0,0,1
+Schluein,1,0,0,0,1
+Schwarzenburg,1,0,0,0,1
+Schwyz,1,0,2,0,3
+Sempach,1,0,0,0,1
+Sent,1,0,0,0,1
+Sion,0,1,0,0,1
+Solothurn,1,0,0,0,1
+Sonceboz,1,1,0,0,2
+StÃ¤fa,1,0,0,0,1
+Stansstad,0,1,0,0,1
+Steffisburg,1,1,0,0,2
+Steinen,0,0,1,0,1
+Teufen,1,0,0,0,1
+ThÃ´nex,0,1,0,0,1
+Thun,0,1,0,0,1
+Trimbach,0,1,0,0,1
+Troinex,0,1,0,0,1
+Trun,1,0,0,0,1
+UrnÃ¤sch,1,0,0,0,1
+Uster,1,0,0,0,1
+Utzenstorf,1,0,0,0,1
+Vaduz,0,1,0,0,1
+Valeyres-sous-Rances,1,0,0,0,1
+Vals,0,0,1,0,1
+Verbier,0,1,0,0,1
+Versoix,1,0,0,0,1
+Vevey,1,3,0,0,4
+Villarepos,0,1,0,0,1
+Vitznau,0,1,2,0,3
+Vouvry,1,0,0,0,1
+Vufflens-le-ChÃ¢teau,0,1,0,0,1
+WÃ¶lflinswil,1,0,0,0,1
+Wangen bei DÃ¼bendorf,0,1,0,0,1
+Wengi bei BÃ¼ren,1,1,0,0,2
+Wigoltingen,0,0,1,0,1
+Wilderswil,1,1,0,0,2
+Winterthur,1,0,0,0,1
+Vaud,2,0,0,0,2
+Valais,1,3,0,0,4
+Zug,2,0,0,0,2
+Zurich,6,8,3,0,17
