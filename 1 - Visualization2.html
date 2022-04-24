@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<h1>Visualization 2</h1>
+
+<p>This is my second visualization for the final project. What I have created is a pair of pie charts that display the proportions of the different cuisines in the dataset.</p>
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<button onclick="update(data1)">All Awards</button>
+<button onclick="update(data2)">2/3 Star</button>
+
+<div id="my_dataviz"></div>
+
+
+<script>
+
+var width = 600
+    height = 600
+    margin = 50
+
+var radius = Math.min(width, height) / 2 - margin
+
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var data1 = {a: 14, b: 25, c:49, d:10, e:13, f:32, g:1, h:2, i:25, j:49, k:15, l:1, m:5, n:7, o:2, p:1, q:28, r:10, s:2, t:2, u:6, v:1, w:21, x:1, y:2}
+var data2 = {a: 1, b: 12, c:8, d:1, e:1, f:3}
+
+var color = d3.scaleOrdinal()
+  .domain(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"])
+  .range(d3.schemePaired)
+  .domain(["m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"])
+  .range(d3.schemeCategory10);
+
+function update(data) {
+
+  var pie = d3.pie()
+    .value(function(d) {return d.value; })
+    .sort(function(a, b) { console.log(a) ; return d3.ascending(a.key, b.key);} )
+  var data_ready = pie(d3.entries(data))
+
+  var u = svg.selectAll("path")
+    .data(data_ready)
+
+  
+  u
+    .enter()
+    .append('path')
+    .merge(u)
+    .transition()
+    .duration(1000)
+    .attr('d', d3.arc()
+      .innerRadius(0)
+      .outerRadius(radius)
+    )
+    .attr('fill', function(d){ return(color(d.data.key)) })
+    .attr("stroke", "black")
+    .style("stroke-width", ".5px")
+    .style("opacity", 1)
+
+ 
+  u
+    .exit()
+    .remove()
+
+}
+
+
+</script>

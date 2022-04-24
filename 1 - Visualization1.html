@@ -1,0 +1,91 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<h1>Visualization 1</h1>
+
+<p>This visualization is a bar chart that displays the number of awarded restaurants for the top 15 cities in Switzerland, broken down by award type.</p>
+
+<img src="https://raw.githubusercontent.com/CRMSH3/Test/main/New%20Project.png" alt="legend1" style="width:300px;height:200px;">
+
+<div id="my_dataviz"></div>
+
+<script>
+
+var margin = {top: 10, right: 30, bottom: 20, left: 50},
+    width = 1000 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("https://raw.githubusercontent.com/CRMSH3/Test/main/michelinswissRaw2.csv", function(data) {
+
+  var subgroups = data.columns.slice(1)
+
+  var groups = d3.map(data, function(d){return(d.group)}).keys()
+
+  var x = d3.scaleBand()
+      .domain(groups)
+      .range([0, width])
+      .padding([0.2])
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickSizeOuter(0));
+
+  var y = d3.scaleLinear()
+    .domain([0, 20])
+    .range([ height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  var color = d3.scaleOrdinal()
+    .domain(subgroups)
+    .range(d3.schemeTableau10);
+
+  var stackedData = d3.stack()
+    .keys(subgroups)
+    (data)
+
+
+  var mouseover = function(d) {
+    var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
+    var subgroupValue = d.data[subgroupName];
+    d3.selectAll(".myRect").style("opacity", 0.2)
+    d3.selectAll("."+subgroupName)
+      .style("opacity", 1)
+    }
+
+  var mouseleave = function(d) {
+    d3.selectAll(".myRect")
+      .style("opacity",0.8)
+    }
+
+  svg.append("g")
+    .selectAll("g")
+    .data(stackedData)
+    .enter().append("g")
+      .attr("fill", function(d) { return color(d.key); })
+      .attr("class", function(d){ return "myRect " + d.key }) // Add a class to each subgroup: their name
+      .selectAll("rect")
+      .data(function(d) { return d; })
+      .enter().append("rect")
+        .attr("x", function(d) { return x(d.data.group); })
+        .attr("y", function(d) { return y(d[1]); })
+        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+        .attr("width",x.bandwidth())
+        .attr("stroke", "grey")
+      .on("mouseover", mouseover)
+      .on("mouseleave", mouseleave)
+
+})
+
+</script>
