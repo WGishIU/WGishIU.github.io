@@ -4,8 +4,56 @@
 
 <h1>Documentation</h1>
 
-<p>My second paragraph.</p>
+<h1> Design Process </h1>
+<p> My design process for these visualizations was to make some simple charts to give an idea of the Michelin profile of Switzerland. I initially wanted to create an intractable map, but I had many difficulties trying to create one and online tutorials were not helping me. As such, I chose to create a set of pie charts and a bar chart, as these were in my skill range and are efficient ways of showcasing the data I wanted to present. Bar charts and pie charts are both ubiquitous types of visualizations too, so I wanted to hone my skills at creating them. I of course looked at some other visualizations online to get some ideas. One thing I gleaned from my research was the button design I used for visualization 2. I thought this looked practical in real life and interesting to make, so I tried my hand at replicating it. I did not sketch out my visualizations, due to my unfamiliarity with D3 (outside of what we have learned in the lectures), I did not want to sketch things outside of my skill range. 
+<br>
+<br>
+As for the dataset, I found a Michelin award dataset from 2021 that cataloged every Michelin-awarded restaurant in the world. This dataset was voluminous and seemed fun to work with, so I chose to use it. Looking through the countries in the dataset I selected, many countries had almost all of their restaurants centered around one or two areas. Japan for example had a number of starred restaurants in Tokyo, Kyoto, and Osaka, but none elsewhere. Countries like this would not make for very interesting visualizations, so I ignored these. I felt as though Switzerland was the best candidate from the countries in the dataset, as the country is easily split into cantons, each of these cantons has at least one restaurant, and the country has a reasonable amount of awarded restaurants. 
+<br><br>
+Once I decided on Switzerland, I had to do some alterations to the dataset. First, I isolated all the restaurants in Switzerland from the rest of the dataset. Then I hid the columns from the dataset that I didn’t feel were necessary, such as the latitude/longitude values and the restaurant phone numbers, since these columns weren’t helpful for visualizations. Next, I put together some pivot tables and graphs to get some visualization ideas. I also used pivot tables to get a better handle on the data and to help me make my visualizations. </p>
+<h1> Rationale of design choices </h1>
+<h2> Bar chart </h2>
+<p> First, I put together a bar chart. I realize bar charts are not exactly breaking new ground, but I personally like them for visualization purposes, so I wanted to include a HTML-created one here. The bar chart was fairly simple to conceptualize and create. Initially, I had imported all of the cities in the dataset for this barchart, but this made a very cluttered and unattractive visualization, so I instead opted for the top 15 cities. Including the top 15 cities helped to display a good deal of the data without creating too large of a bar chart. For the record, when multiple cities tied, I ranked those with higher level awards higher. This bar chart has a dual purpose of displaying what cities rank the highest in number of awarded restaurants and displaying the proportion of awards amongst these top cities. For the interactive element, I made mousing over the award sections highlight that same award section in each city. This helps to highlight how much of that award each city in the chart has. I went back and forth over including the numbers on the chart as well, but I think keeping them made the chart a little too cluttered, so I eventually opted to omit them. </p>
+<h2> Pie charts </h2>
+<p> I chose to create pie charts to convey the proportion of the various cuisines within the dataset. There was a good deal of variety within the cuisines in the dataset, so I thought it might be good to convey this in a visualization. Seeing the different distribtuions amongst the different award levels, I thought this would be perfect for the button idea I mentioned earlier. I was initially going to create four pie charts, one for each award type, but I felt that this would be redundant, so I opted to create three pie: one for all award types, one for the 1 star category, and another for the 2 Star and 3 Star categories. This eliminated the redundancy of having four charts while still illustrating the difference between the proportions for the award types. There was so many different cuisines within the dataset that none of D3’s color sets had enough colors to not repeat, so I coded each color by hand. This was a little tedious, but repetition in a chart like this would confuse viewers. Since there were many entries and these visualizations were pie charts, I mainly went for colors that stood out from one another. I am not sure if it was due to the buttons or the transitions between the graphs, but I was not able to use D3 to create data labels or a coded legend. As such, I put together the legend in Photoshop, like I did in visualization 1. </p>
+<h2> Static maps </h2>
+<p> As I mentioned, I had many issues creating an interactive map, but I still wanted to try my hand at creating map visualizations, so I made two static maps as a bonus. I made these maps using Photoshop. For the first, I thought it might be interesting to display the top ranking each canton’s restaurants has obtained. I was split between doing a color scale or not for this, but I felt a more distinct set of colors would be better to emphasize the differences between the cantons. Next, for the second map, I used a color scale to show the density of award-winning restaurants per canton. This map shows the difference between how many Michelin-awarded restaurants each canton has. These maps required a little more data work. Since the dataset usually mentions cities as opposed to canton, I had to do a little maneuvering with the data for these canton maps. I chose canton maps as they are more concise and easier to read, even if they took me a little longer to put together. </p>
+<h2> Describe how you used your visualizations to discover facts or answer questions you had. </h2>
+<p> In this visualization, what I wanted to present was the Michelin profile of Switzerland. As such, I constructed the visualization to present these facts in a clear manner. Together, I feel that the bar chart, the pie charts, and the maps create a pretty good image of Switzerland’s Michelin-awarded restaurants, their locations, and their cuisines. When first viewing the dataset, I had some initial questions about the data and how it was useful, and I tried to create visualizations that highlighted the utility of the dataset. These visualizations can be used to answer questions like: 
+<br>
+<br>
+<h3> What city and canton has the most Michelin-awarded restaurants? </h3>
+<br>
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/q11.PNG" alt="legend2" style="width:100px;height:200px;">
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/q12.PNG" alt="legend2" style="width:700px;height:275px;">
+<br>
+The answer is Zurich!
+<br>
+<h3> Which cuisine is the most popular amongst Switzerland’s awarded restaurants? </h3>
+<br>
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/q3.PNG" alt="legend2" style="width:500px;height:400px;">
+<br>
+The most popular is French!
+<br>
+<h3> Is there much variety within the restaurants in the dataset? </h3>
+<br>
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/q2.PNG" alt="legend2" style="width:500px;height:400px;">
+<br>
+Despite the prevalence of French and modern restaurants, there is a great deal of variety!
+<br>
+<h3> How many cantons have 3 Star restaurants? </h3>
+<br>
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/q4.PNG" alt="legend2" style="width:700px;height:275px;">
+<br>
+Vaud and Graubunden both have 3 Star restaurants!
+<br>
+<br>
+<p> Overall, this was a very informative and interesting project. I had never worked with HTML or D3 before taking this course, so I learned a great deal over the course of this class. While it was a pretty steep learning curve at first, this style of visualization lets me work with data in ways I never have before and create visualizations that wouldn’t be possible with other tools like Excel or Tableau. Moreover, learning how to create visualizations is an important skill for anyone that wants to pursue a career in data work. If I am able to attain the librarian positions I am aiming for, I might use visualizations to convey information about the library or its patrons. What I have learned in this course has definitely helped me to create better, more effective visualizations.  Even though I struggled a bit when making my visualizations for this assignment, I am still fairly happy with what I was able to put together. </p>
 
+
+
+<a href="https://www.kaggle.com/datasets/ngshiheng/michelin-guide-restaurants-2021">Link to original dataset</a>
+<br> <br>
 
 </body>
 </html>

@@ -3,23 +3,27 @@
 
 <h1>Visualization 2</h1>
 
-<p>This is my second visualization for the final project. What I have created is a pair of pie charts that display the proportions of the different cuisines in the dataset.</p>
+<p>This is my second visualization for the final project. What I have created is a set of pie charts that display the proportions of the different cuisines in the dataset.</p>
 
 <script src="https://d3js.org/d3.v4.js"></script>
 
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
 <button onclick="update(data1)">All Awards</button>
-<button onclick="update(data2)">2/3 Star</button>
+<button onclick="update(data2)">1 Star</button>
+<button onclick="update(data3)">2/3 Star</button>
+
+<h2>Cuisine Variety</h2>
 
 <div id="my_dataviz"></div>
 
+<img src="https://raw.githubusercontent.com/WGishIU/WGishIU.github.io/main/l.png" alt="legend2" style="width:800px;height:300px;">
 
 <script>
 
 var width = 600
     height = 600
     margin = 50
+
 
 var radius = Math.min(width, height) / 2 - margin
 
@@ -30,14 +34,13 @@ var svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-var data1 = {a: 14, b: 25, c:49, d:10, e:13, f:32, g:1, h:2, i:25, j:49, k:15, l:1, m:5, n:7, o:2, p:1, q:28, r:10, s:2, t:2, u:6, v:1, w:21, x:1, y:2}
-var data2 = {a: 1, b: 12, c:8, d:1, e:1, f:3}
+var data1 = {a: 14, b: 25, c:49, d:10, e:13, f:32, g:1, h:2, i:3, j:10, k:15, l:1, m:5, n:2, o:7, p:1, q:28, r:10, s:2, t:2, u:6, v:1, w:21, x:1, y:2}
+var data2 = {a:6, b: 11, c:27, d: 4, e: 9, f:21, g:1, h:1, i:2, j:1, k:1, l:1, m:1, n:1}
+var data3 = {a: 1, b: 12, c:8, d:1, e:1, f:3}
 
 var color = d3.scaleOrdinal()
-  .domain(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"])
-  .range(d3.schemePaired)
-  .domain(["m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"])
-  .range(d3.schemeCategory10);
+  .domain(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"])
+  .range(["salmon", "crimson", "thistle", "darkred", "mediumvioletred", "lime", "slategrey", "darkorange", "teal", "lemonchiffon", "moccasin", "darkkhaki", "rebeccapurple", "mediumseagreen", "gold", "blue", "green", "yellow", "mintcream", "grey", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange"])
 
 function update(data) {
 
@@ -55,7 +58,7 @@ function update(data) {
     .append('path')
     .merge(u)
     .transition()
-    .duration(1000)
+    .duration(1500)
     .attr('d', d3.arc()
       .innerRadius(0)
       .outerRadius(radius)
@@ -65,7 +68,7 @@ function update(data) {
     .style("stroke-width", ".5px")
     .style("opacity", 1)
 
- 
+
   u
     .exit()
     .remove()
